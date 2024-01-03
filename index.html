@@ -18,11 +18,24 @@
             name: "Michael",
             age:21
         }
+        handleClick(){
+          console.log(event.target)
+        }
+        handleMouseClick(){
+          console.log(event.target, event.pageX)
+        }
+        handleCopy(){
+          console.log('Try one more time')
+        }
+        
         render(){
             return (
                 <div className='app-component'>
                     <h1>Hello, world!</h1>
                     <p>My name is {this.state.name} and I am {this.state.age} years old.</p>
+                    <button onClick={this.handleClick}>Click</button>
+                    <button onMouseOver={this.handleMouseClick}>Hover me</button>
+                    <p onCopy={this.handleCopy}>What we pick, we get</p>
                 </div>
 
             )
