@@ -1,3 +1,4 @@
+import NewComponent from "./NewComponent";
 
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <div className="App">
       <h1>My first React app!</h1>
       <p>Hello!</p>
+      <NewComponent />
     </div>
   );
 }
