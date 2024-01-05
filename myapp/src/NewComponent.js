@@ -1,11 +1,11 @@
-function NewComponent() {
+function NewComponent({name, age, Tshirt}) {
     return (
       <div className="NewComponent">
-        <div>Name: Michael</div>
-        <div>Age: 21</div>
-        <div>T-shirt: Black</div>
+        <div>Name: {name}</div>
+        <div>Age: {age}</div>
+        <div>T-shirt: {Tshirt}</div>
       </div>
     );
   }
   
-  export default NewComponent;
+  export default NewComponent; 
