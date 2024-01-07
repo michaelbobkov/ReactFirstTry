@@ -1,5 +1,5 @@
 import NewComponent from "./NewComponent";
-
+import AddPerson from "./AddPerson"
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
       <h1>My first React app!</h1>
       <p>Hello!</p>
       <NewComponent people={people}/>
+      <AddPerson />
     </div>
   );
 }
