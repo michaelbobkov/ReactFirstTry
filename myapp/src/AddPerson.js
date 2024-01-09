@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddPerson() {
+function AddPerson({ addPerson }) {
     const [state, setState] = useState({
         name: null,
         age: null,
@@ -16,8 +16,9 @@ function AddPerson() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(state);
+        addPerson(event, state)
     }
+
 
     return (
         <div>
