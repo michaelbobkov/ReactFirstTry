@@ -1,4 +1,4 @@
-function NewComponent({people}) {
+function NewComponent({deletePerson, people}) {
     const list = people.map(person => {
     if (person.age > 20){
         return(
@@ -6,6 +6,7 @@ function NewComponent({people}) {
             <div>Name: {person.name}</div>
             <div>Age: {person.age}</div>
             <div>T-shirt: {person.Tshirt}</div>
+            <button onClick={(event) => { deletePerson(event, person.id) }}>Delete person</button>
         </li>
         )
     } else{

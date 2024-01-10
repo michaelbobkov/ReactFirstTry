@@ -16,12 +16,20 @@ function App() {
     setPeople([...people, person])
   };
 
+  const deletePerson = (event, id)=>{
+    let peoplelist = people.filter(person =>{
+      return person.id !== id
+    })
+    console.log(id)
+    setPeople(peoplelist)
+  }
+
   return (
     <div className="App">
       <h1>My first React app!</h1>
       <p>Hello!</p>
-      <NewComponent people={people}/>
-      <AddPerson addPerson={addPerson}/>
+      <NewComponent deletePerson={deletePerson} people={people}/>
+      <AddPerson addPerson={addPerson} />
     </div>
   );
 }
